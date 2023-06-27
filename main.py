@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 
 
-
 df = pd.read_csv('data.csv')
 random_row = df.sample(n=1)
 
