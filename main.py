@@ -21,11 +21,19 @@ dirty_css_tech = st.markdown("""
 div.stButton > button:first-child {
     background-color: #EB804C;
 }
+.bold_font {
+    font-size:2em !important;
+    font-weight: bold;
+}
+.less_bold {
+    font-size:1.2em !important;
+    font-weight: bold;
+}
 </style>""", unsafe_allow_html=True)
 
 if st.button('Cliquez ici !'):
-    st.write(random_word)
-    st.write(random_definition)
+    st.markdown(f"<p class='bold_font'>{random_word}</p>", unsafe_allow_html=True)
+    st.markdown(f"<p class='less_bold'>{random_definition}</p>", unsafe_allow_html=True)
     st.write("n'abusez pas des bonnes choses, on vit tout de même dans une saucisse.")
 else:
     st.write("Pas les mamans :no_entry:")
